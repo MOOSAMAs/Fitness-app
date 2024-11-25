@@ -40,7 +40,7 @@ const protectedRoutes = handleError(async(req , res , next)=>{
 const allowedTo = (...roles)=>{
     return handleError(async(req , res , next)=>{
         if(!roles.includes(req.user.role)){
-            return next(new messageError('You not authorized to this point'))
+            return next(new messageError('You not authorized to this point') , 404)
         }
         next()
     })
