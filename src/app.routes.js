@@ -20,7 +20,7 @@ export function init(app){
     app.use('/api/workoutplans' , workoutRouter)
     
     app.all('/*splat',(req, res, next) => {
-        next(new messageError(`invalid url ${req.originalUrl}`, 404));
+        next(new messageError(`invalid url` + req.originalUrl, 404));
       });      
     app.use(globalError)
 }
