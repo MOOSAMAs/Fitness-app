@@ -15,4 +15,4 @@ init(app)
 
 
 dbConnection()
-app.listen(process.env.PORT || port, () => console.log(`Example app listening on port ${process.env.PORT}!`))
+app.listen(process.env.PORT || port, "0.0.0.0" , () => console.log(`Example app listening on port ${process.env.PORT}!`))
