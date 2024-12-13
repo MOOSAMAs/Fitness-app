@@ -19,7 +19,7 @@ export function init(app){
     app.use('/api/dietprogram' , dietRouter)
     app.use('/api/workoutplans' , workoutRouter)
     
-    app.all('/*splat',(req, res, next) => {
+    app.all('*',(req, res, next) => {
         next(new messageError(`invalid url` + req.originalUrl, 404));
       });      
     app.use(globalError)
