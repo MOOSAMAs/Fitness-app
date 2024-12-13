@@ -13,7 +13,6 @@ app.use(cors())
 app.use(morgan('dev'))
 init(app)
 
-app.get('/', req , res => res.json('Hello world'))
 
 dbConnection()
 app.listen(process.env.PORT || port, () => console.log(`Example app listening on port ${process.env.PORT}!`))
