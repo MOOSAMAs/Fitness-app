@@ -1,8 +1,8 @@
-FROM node:20
+FROM node:22
 
-WORKDIR /E-Commerce
+WORKDIR /Fitness
 
-COPY . /E-Commerce/
+COPY . /Fitness//
 
 RUN npm install
 
